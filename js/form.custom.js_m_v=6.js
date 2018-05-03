@@ -41,7 +41,7 @@ function sendFormDataTmp(field, value, target)
             data.form_data[name] = value;    
         }        
     });
-    $.get('http://petgrove.i-shop.co.ua/index.php', data);
+    $.get('/index.php', data);
     
 }
 

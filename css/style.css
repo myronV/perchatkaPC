@@ -38,3 +38,8 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+.text-center.center-block {
+    display: flex;
+    justify-content: center;
+}

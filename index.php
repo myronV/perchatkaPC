@@ -50,16 +50,17 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 	<link rel="stylesheet" href="/css/css.css" type="text/css">
 	<link rel="stylesheet" href="/css/style_002.css" type="text/css">
 	<link rel="stylesheet" href="/css/colors.css" type="text/css">
-	<style type="text/css">.fancybox-margin {
-			margin-right: 17px;
-		}</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="/css/style.css" type="text/css">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 	<script src="/js/script_002.js"></script>
 	<script src="/js/etimer.js"></script>
 
-	<script>if (!window.jQuery) {
-			document.write('<script src="/js/jquery.min.js"/*tpa=http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js*/ ><\/script>');
-		}</script>
+
+
+
+
 
 
 	<link href="/css/custom-styles.min.css" type="text/css" rel="stylesheet"/>
@@ -80,7 +81,7 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="#home">Начало</a></li>
 				<li class=""><a href="#preview">Описание</a></li>
-				<li class=""><a href="#gallery">Галерея</a></li>
+				<li class=""><a href="#gallery2">Галерея</a></li>
 				<li class=""><a href="#test">Отзывы</a></li>
 				<li class=""><a href="#guaranry">Гарантии</a></li>
 				<li class=""><a href="#buy">Купить</a></li>
@@ -94,8 +95,7 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 		<div class="row">
 			<div class="col-sm-6">
 				<h1>
-					<center><img src="/img/headtext.png" align="left"
-					             class="headlogo"></center>
+					<center><img src="/img/headtext.png" align="left" class="headlogo"></center>
 				</h1>
 			</div>
 			<!-- <div class="col-sm-6 text-right" >
@@ -120,8 +120,7 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 					<div class="col-sm-5">
 						<!-- форма в шапке страницы -->
 
-						<form method="POST" action="zakaz.php"
-						      id="feedback-form" d_id="form_0" onsubmit="this.submit();">
+						<form method="POST" action="zakaz.php" id="feedback-form" d_id="form_0" onsubmit="if(this.name.value==''){alert('Введите Ваше имя');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона');return false}return true;">
 
 							<legend class="text-center text-uppercase">внимание! только сегодня - скидка в 50%. <br>
 								Цена
@@ -278,25 +277,33 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 		</div>
 	</div>
 </section>
-<section id="gallery">
+<section id="gallery2">
 	<div class="wrapper"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
 				<h2 style="visibility: visible; " class="text-center wow"><b>Галерея</b></h2>
-				<div class="text-center">
+				<div class="text-center center-block">
 					<!-- слайд галереи, в ссылку вставляем адрес большой картинки, в тэг картинки адрес миниатюры -->
-
-					<img src="/img/1_prev.png" alt="" title="">
+					<a href="/img/1_big.jpg" data-fancybox="gallery" data-caption="">
+						<img src="/img/1_prev.png" alt="" />
+					</a>
 					<!-- слайд галереи -->
-
-					<img src="/img/2_prev.png" alt="" title="">
+					<a href="/img/2_big.jpg" data-fancybox="gallery" data-caption="">
+						<img src="/img/2_prev.png" alt="" />
+					</a>
 					<!-- слайд галереи -->
-
-					<img src="/img/3_prev.png" alt="" title="">
+					<a href="/img/3_big.jpg" data-fancybox="gallery" data-caption="">
+						<img src="/img/3_prev.png" alt="" />
+					</a>
 					<!-- слайд галереи -->
-
-					<img src="/img/4_prev.png" alt="" title="">
+					<a href="/img/4_big.jpg" data-fancybox="gallery" data-caption="">
+						<img src="/img/4_prev.png" alt="" />
+						<!-- слайд галереи -->
+					</a>
+					<a href="/img/5_big.jpg" data-fancybox="gallery" data-caption="">
+						<img src="/img/5_prev.png" alt="" />
+					</a>
 					<!-- слайд галереи -->
 				</div>
 			</div>
@@ -338,10 +345,10 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 					</div>
 					<div class="col-sm-9">
 						<!-- тело комментария -->
-						<h3>в использовании я осталась довольна!</h3>
+						<h3>В использовании я осталась довольна!</h3>
 						<p>У меня две собаки и две кошки, представляйте сколько у меня дома шерсти!! Когда увидела что
 							появилась Pet Brush Glove Glove, я только о ней и думала. Заказала сразу две перчатки!Пока
-							посылка шла -дни считала. Когда получила, целый день питомцев своих расчесывала, даже кошки
+							посылка шла - дни считала. Когда получила, целый день питомцев своих расчесывала, даже кошки
 							довольны остались , хотя они у меня привереды обе. Так что всем советую, особенно тем кто
 							любит чистоту в доме.</p>
 
@@ -362,7 +369,7 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 						<!-- тело комментария -->
 						<h3>Очень здорово!</h3>
 						<p>Рэкс постоянно трется около дивана,чтобы я его этой перчаткой расчесывала;) Теперь всегда
-							чистая одежда,чистый диван, а главное чистый автомобиль!!! а то как на дачу не поедем,
+							чистая одежда,чистый диван, а главное чистый автомобиль!!! А то как на дачу не поедем,
 							постоянно все в волосах. Спасибо перчатке Pet Brush Glove !</p>
 
 						<!-- тело комментария -->
@@ -661,9 +668,9 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 			<div class="col-sm-6">
 				<img src="/img/minilogo2.png"  align="left" class="footimg">
 			</div>
-			<div class="col-sm-6 text-right">
-				<p class="phone">Закажите обратный бесплатный звонок</p>
-				<a data-toggle="modal" href="#modal-zk" class="btn btn-lg btn-custom mb">Заказать <span>обратный</span> бесплатный звонок</a>
+			 <div class="col-sm-6 text-right">
+<!--				<p class="phone">Закажите обратный бесплатный звонок</p>-->
+<!--				<a data-toggle="modal" href="#modal-zk" class="btn btn-lg btn-custom mb">Заказать <span>обратный</span> бесплатный звонок</a>-->
 			</div>
 		</div>
 
@@ -691,7 +698,7 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 			</div>
 			<div class="modal-body">
 
-				<form action="zakaz.php" method="POST" name="order_form" target="_parent" d_id="form_1" onsubmit="this.submit();">
+				<form action="zakaz.php" method="POST" name="order_form" target="_parent" d_id="form_1" onsubmit="if(this.name.value==''){alert('Введите Ваше имя');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона');return false}return true;">
 
 					<div class="form-group">
 						<label for="" class="sr-only">label</label>
@@ -733,8 +740,7 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 			</div>
 			<div class="modal-body">
 
-				<form action="zakaz.php" method="POST"
-				      name="order_form" target="_parent" d_id="form_2" onsubmit="this.submit();">
+				<form action="zakaz.php" method="POST" name="order_form" target="_parent" d_id="form_2" onsubmit="if(this.name.value==''){alert('Введите Ваше имя');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона');return false}return true;">
 
 					<div class="form-group">
 						<label for="" class="sr-only">label</label>
@@ -744,12 +750,12 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 					</div>
 					<div class="form-group">
 						<label for="" class="sr-only">label</label>
-						<input name="name" placeholder="Введите ваше имя" class="form-control input-lg" required type="text">
+						<input name="name" placeholder="Введите ваше имя" class="form-control input-lg" required="">
 					</div>
 
 					<div class="form-group">
 						<label for="" class="sr-only">label</label>
-						<input name="phone" placeholder="Введите ваш телефон" class="form-control input-lg" required type="text">
+						<input name="phone" placeholder="Введите ваш телефон" class="form-control input-lg" required="">
 					</div>
 
 					<button type="submit" class="btn btn-creative btn-lg btn-block"><span>Заказать! </span></button>
@@ -804,6 +810,7 @@ $_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'
 
 <script type="text/javascript" src="/js/sisyphus.min.js_m_v=2.js"></script>
 <script type="text/javascript" src="/js/form.custom.js_m_v=6.js"></script>
+
 
 
 <div id="polit" class="modal">

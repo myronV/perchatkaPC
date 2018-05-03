@@ -10223,22 +10223,22 @@ h2 b:before, h2 b:after {
 }
 
 /*------- #gallery ------- */
-#gallery {
+#gallery2 {
   position: relative;
   color: white;
   background-color: #127b0b;
 }
-#gallery h2 b {
+#gallery2 h2 b {
   color: white;
 }
-#gallery .wrapper {
+#gallery2 .wrapper {
   background-image: url("../img/forest.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   opacity: 1;
 }
-#gallery img {
+#gallery2 img {
   margin: 0 5px 5px 0;
 }
 

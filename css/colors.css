@@ -37,13 +37,13 @@ header .wrapper {
   background-attachment: fixed;
 }
 
-#gallery {
+#gallery2 {
   color: inherit;
 }
-#gallery h2 b {
+#gallery2 h2 b {
   color: #fff;
 }
-#gallery .wrapper {
+#gallery2 .wrapper {
   background-image: url('../img/w1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
